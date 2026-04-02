@@ -1,6 +1,6 @@
 # info_php_26
 
-ola oioioio
+ola 
 - criação da branch dev
 - criação de feature
 
