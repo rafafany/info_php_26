@@ -118,13 +118,15 @@ do
 } while ($calcu <=10);
 
 
-
-
+echo "<br>"; //exercicios para saber se o numero é par
 echo "<br>";
-echo "<br>";
- 
 
-foreach ()
-{
-
+$contador = 0
+for($numero = 1; $contador < 10; $numero++) {
+    if ($numero % 2== 0)
+    echo "$numero<br>";
+    $contador++;
 }
+
+echo "<br>";
+echo "<br>";
