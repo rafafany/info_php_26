@@ -52,3 +52,79 @@ echo "a divisao de $valor1 e $valor2 eh $div";
 
 //echo $numero; 
 //echo date ("H:1:s");//
+
+ echo "<br>";
+  echo "<br>";
+
+$nota1 = 15;
+$nota2 = 10;
+$nota3 = 6;
+$peso1 = 1;
+$peso2 = 2;
+$peso3 = 3;
+$somaPeso = $peso1 + $peso2 + $peso3;
+$mediaFinal = (($nota1 * $peso1) + ($nota2 * $peso2) + ($nota3 * $peso3))/$somaPeso;
+ 
+if ($mediaFinal >= 7){
+    echo "aluno aprovado <br>";
+} else{
+    echo "aluno reprovado";
+} 
+
+
+echo "<br>";
+echo "<br>";
+
+
+// LOOPs
+$numero = 3;
+
+for($calcu = 0; $calcu <= 10; $calcu++) {
+  echo "$numero x $calcu =" . $numero * $calcu. "<br>";
+}
+
+echo "<br>";
+echo "<br>";
+
+$numero = 2;
+$calcu = 0;
+
+while ($calcu <=10)
+{
+    echo "$numero x $calcu =" . $numero * $calcu. "<br>";  
+    $calcu++;  
+}
+
+echo "<br>";
+echo "<br>";
+  
+
+while ($calcu <=10)//while completo faz3r dps 
+{
+    echo "$numero x $calcu =" . $numero * $calcu. "<br>";  
+    $calcu++;  
+}
+
+echo "<br>";
+echo "<br>";
+
+$numero = 5;
+$calcu = 0;
+
+do 
+{ 
+    echo "$numero x $calcu =" . $numero * $calcu. "<br>";  
+    $calcu++;  
+} while ($calcu <=10);
+
+
+
+
+echo "<br>";
+echo "<br>";
+ 
+
+foreach ()
+{
+
+}
