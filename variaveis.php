@@ -1,245 +1,230 @@
 <?php
- //mock
-//r dados de usuario, sendo eles: 
- 
-$nome = "rafa";
-$idade = "21";
-$sexo = "feminino";
-$nomePai = "jose guimaraes";
-$nomeMae ="maria lopes";
 
-//*echo "o usuario de nome $nome " . "idade $idade". "sexo $sexo". "é filho de $nomePai". "e $nomeMae";
-//echo "<br>";
-//echo "o usuario de nome $nome idade $idade sexo $sexo é filho de $nomePai e $nomeMae";
+// =====================================
+// 📘 INTRODUÇÃO AO PHP
+// =====================================
 
-$valor1 = "1";
-$valor2 = "1";
+// PHP é uma linguagem de back-end (roda no servidor)
+
+// =====================================
+// 📌 VARIÁVEIS
+// =====================================
+
+$nome = "Rafa";     
+$idade = 21;        
+$altura = 1.70;     
+$ativo = true;      
+
+
+// =====================================
+// 📌 EXIBINDO DADOS
+// =====================================
+
+echo "Nome: $nome <br>";
+echo "Idade: $idade <br>";
+echo "Altura: $altura <br>";
+
+
+// 👉 ATIVIDADE:
+// Mostrar uma frase completa com seus dados
+
+
+echo "<br><br>";
+
+
+// =====================================
+// 📌 OPERAÇÕES MATEMÁTICAS
+// =====================================
+
+$valor1 = 10;
+$valor2 = 5;
+
 $soma = $valor1 + $valor2;
-
-echo "a soma de $valor1 e $valor2 eh $soma";
-echo "<br>";
-$valor1 = "1";
-$valor2 = "1";
 $sub = $valor1 - $valor2;
-
-echo "a subtracao de $valor1 e $valor2 eh $sub"; 
-
- echo "<br>";
-$valor1 = "1";
-$valor2 = "1";
 $mult = $valor1 * $valor2;
-
-echo "a multiplicaçao de $valor1 e $valor2 eh $mult"; 
-
- echo "<br>";
-$valor1 = "1";
-$valor2 = "1";
 $div = $valor1 / $valor2;
 
-echo "a divisao de $valor1 e $valor2 eh $div"; 
-//$numero = 10;//int
-//$numero = 10.4;//float, long
-//$numero = "10";// string
-//$numero = "10"// char
+echo "Soma: $soma <br>";
+echo "Subtração: $sub <br>";
+echo "Multiplicação: $mult <br>";
+echo "Divisão: $div <br>";
 
 
-// tipos de estruturas
-// array || vetor
-
-//$array = [];
-//$array = array ();
-//$objeto = new stdClass (); // objeto ouu classe
-
-//echo $numero; 
-//echo date ("H:1:s");//
-
- echo "<br>";
-  echo "<br>";
-
-$nota1 = 15;
-$nota2 = 10;
-$nota3 = 6;
-$peso1 = 1;
-$peso2 = 2;
-$peso3 = 3;
-$somaPeso = $peso1 + $peso2 + $peso3;
-$mediaFinal = (($nota1 * $peso1) + ($nota2 * $peso2) + ($nota3 * $peso3))/$somaPeso;
- 
-if ($mediaFinal >= 7){
-    echo "aluno aprovado <br>";
-} else{
-    echo "aluno reprovado";
-} 
+// 👉 ATIVIDADE:
+// Usar uma variável $resultado para todas operações
 
 
-echo "<br>";
-echo "<br>";
+echo "<br><br>";
 
 
-// LOOPs
-$numero = 3;
+// =====================================
+// 📌 CONDICIONAL (IF / ELSE)
+// =====================================
 
-for($calcu = 0; $calcu <= 10; $calcu++) {
-  echo "$numero x $calcu =" . $numero * $calcu. "<br>";
+$nota = 7;
+
+if ($nota >= 7){
+    echo "Aprovado <br>";
+} else {
+    echo "Reprovado <br>";
 }
 
-echo "<br>";
-echo "<br>";
 
-$numero = 2;
-$calcu = 0;
+// 👉 ATIVIDADE:
+// Criar sistema com aprovação, recuperação e reprovação
 
-while ($calcu <=10)
-{
-    echo "$numero x $calcu =" . $numero * $calcu. "<br>";  
-    $calcu++;  
+
+echo "<br><br>";
+
+
+// =====================================
+// 📌 LOOP FOR
+// =====================================
+
+for ($i = 0; $i <= 5; $i++){
+    echo "Número: $i <br>";
 }
 
-echo "<br>";
-echo "<br>";
-  
 
-while ($calcu <=10)//while completo faz3r dps 
-{
-    echo "$numero x $calcu =" . $numero * $calcu. "<br>";  
-    $calcu++;  
-}
-
-echo "<br>";
-echo "<br>";
-
-$numero = 5;
-$calcu = 0;
-
-do 
-{ 
-    echo "$numero x $calcu =" . $numero * $calcu. "<br>";  
-    $calcu++;  
-} while ($calcu <=10);
+// 👉 ATIVIDADE:
+// Fazer uma tabuada
 
 
-echo "<br>"; //exercicios para saber se o numero é par
-echo "<br>";
+echo "<br><br>";
+
+
+// =====================================
+// 📌 LOOP WHILE
+// =====================================
 
 $contador = 0;
-for($numero = 1; $contador < 10; $numero++) {
-    if ($numero % 2== 0)
-    echo "$numero<br>";
+
+while ($contador <= 5){
+    echo "Contador: $contador <br>";
     $contador++;
 }
 
-echo "<br>";
-echo "<br>";
-// EXERCICIOS de REVISAO AULA 14/04/2026.
 
-/**
- * Calcular IMC(Indice de Massa Corporal) de uma pessoa e
- * exibir os valores utilizados no calculo assim como o seu IMC.
- *
- * Saída esperada: O IMC é: 123
- */
+// 👉 ATIVIDADE:
+// Mostrar números pares até 20
 
-$altura = 1.70;
+
+echo "<br><br>";
+
+
+// =====================================
+// 📌 LOOP DO WHILE
+// =====================================
+
+$numero = 0;
+
+do {
+    echo "Valor: $numero <br>";
+    $numero++;
+} while ($numero <= 5);
+
+
+// 👉 ATIVIDADE:
+// Contagem regressiva de 10 até 0
+
+
+echo "<br><br>";
+
+
+// =====================================
+// 📌 EXERCÍCIO: MÉDIA
+// =====================================
+
+$nota1 = 8;
+$nota2 = 7;
+$nota3 = 6;
+
+$media = ($nota1 + $nota2 + $nota3) / 3;
+
+echo "Média: $media <br>";
+
+
+// 👉 ATIVIDADE:
+// Mostrar se o aluno foi aprovado
+
+
+echo "<br><br>";
+
+
+// =====================================
+// 📌 EXERCÍCIO: IMC
+// =====================================
+
 $peso = 65;
-$imc = $peso/($altura * $altura);
+$altura = 1.70;
 
-echo "o imc é igual a $imc baseado na altura $altura e no peso $peso";
+$imc = $peso / ($altura * $altura);
 
-
-echo "<br>";
-echo "<br>";
-/*
- * Calcular quantos segundos tem em 2 horas e 30 minutos e exibir o valor.
- *
- * Dica: converter tudo para uma mesma medida (segundos) para facilitar o calculo.
- *
- * Saída esperada: O Total em segundos é: 9000.
- */
-$horas = 2.30;
-$minutos = $horas/60;  /*jaja arrumo*/
-$segundos = $minutos/60;
-echo "$segundos"; 
+echo "IMC: $imc <br>";
 
 
+// 👉 ATIVIDADE:
+// Classificar IMC
 
-echo "<br>";
-echo "<br>";
-/**
- * Simular o funcionamento de uma calculadora com as duas estruturas lógicas:
- * Switch Case e IF ELSE IF ELSE. Não é necessário o ZERAR, somente o calculo.
- * Operadores: + - * /
- *
- * Dica: utilizar 4 variáveis, uma delas vai ser $operador a outra $resultado.
- */
-$n1 = 2;
+
+echo "<br><br>";
+
+
+// =====================================
+// 📌 CALCULADORA (IF)
+// =====================================
+
+$n1 = 10;
 $n2 = 2;
-$operador = "*";
-$resul = 0;
+$operador = "+";
+$resultado = 0;
 
-if ($operador == "*"){
-    echo "a multiplicação de $n1 e $n2 é igual a =" . $n1 * $n2. "<br>"; 
-} else if ($operador == "+"){
-    echo "a soma de $n1 mais $n2 é igual a =" . $n1 + $n2. "<br>"; 
+if ($operador == "+"){
+    $resultado = $n1 + $n2;
 } else if ($operador == "-"){
-    echo "a subtração de $n1 e $n2 é igual a =" . $n1 - $n2. "<br>"; 
+    $resultado = $n1 - $n2;
+} else if ($operador == "*"){
+    $resultado = $n1 * $n2;
 } else if ($operador == "/"){
-    echo "a divisão de $n1 e $n2 é igual a =" . $n1 / $n2. "<br>"; 
+    $resultado = $n1 / $n2;
 }
 
-echo "<br>";
-echo "<br>";
-
-$n1 = 2;
-$n2 = 2;
-$operador = "*";
-$resul = 0;
+echo "Resultado: $resultado <br>";
 
 
-echo "<br>";
-echo "<br>";
+// 👉 ATIVIDADE:
+// Fazer com SWITCH
 
-/**
- * Exibir os numeros em ordem DECRESCENTE(Maior para Menor - DESC) de 10 - 0.
- *
- * Dica: utilizar laçoes de repetição(loops) FOR e WHILE
- *
- * Saída esperada: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0.
- */
-$ne = 10; 
-$ni = 0; 
- while ($ne > $ni)
-{
-     echo "numero descrecente=" . $ne. "<br>"; 
-    $ne--;  
-}
 
-echo "<br>";
-echo "<br>";
+echo "<br><br>";
 
-/**
- * Calcular o fatorial de um numero qualquer.
- * Ex.: calcular o fatorial de 5 (5!).
- *
- * Dica: 5 x 4 x 3 x 2 x 1. utilizar laçoes de repetição(loops) FOR e WHILE
- *
- * Saída esperada: o fatorial de 5 é: 120.
- */
-$ne = 0; 
-$calcu = 1;
-$result = 0;
 
- for($ne = 5; $ne > $calcu; $ne--) {
-    $result = $ne * $ne;
-    echo "numero fatorial=" . $result. "<br>";
- }
+// =====================================
+// 🧠 EXERCÍCIOS (SEUS ORIGINAIS)
+// =====================================
 
-/**
- * Com base no exercicio de:
- * Listar os 10 primeiros numeros pares com laçoes de repetição(loops) utilizando FOR e WHILE.
- *
- * Encontrar os 5 primeiros numeros Primos.
- *
- * Dica: Utilizar calculo dos pares, sendo que o unico primo par é o 2.
- *
- * Saída esperada: Os 5 primeiros Primos são: 3, 5, 7, 11, 13
- **/
+
+// 1️⃣ Calcular IMC e mostrar valores utilizados
+// Saída esperada: O IMC é: X
+
+
+// 2️⃣ Calcular quantos segundos existem em 2 horas e 30 minutos
+// Dica: converter tudo para segundos
+// Saída esperada: 9000
+
+
+// 3️⃣ Simular uma calculadora com:
+// IF / ELSE e SWITCH
+// Operadores: + - * /
+
+
+// 4️⃣ Exibir números em ordem DECRESCENTE (10 até 0)
+
+
+// 5️⃣ Calcular o fatorial de um número
+// Ex: 5! = 5 × 4 × 3 × 2 × 1 = 120
+
+
+// 6️⃣ Mostrar:
+// - 10 primeiros números pares
+// - 5 primeiros números primos
