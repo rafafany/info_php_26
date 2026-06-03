@@ -37,3 +37,4 @@ $Rvetor = [1, 2, 3];
 
 // estudar herança 
 
+// dbeaver 
