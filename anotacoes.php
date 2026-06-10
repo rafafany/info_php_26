@@ -199,3 +199,8 @@ echo "<br><br>";
 // - 10 primeiros números pares
 // - 5 primeiros números primos
 
+
+
+// anotaçoes mysql //
+
+// SELECT * FROM endereco WHERE estado = "MA";//
