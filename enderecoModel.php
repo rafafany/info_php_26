@@ -1,19 +1,16 @@
 <?php
 
-// CRUD - Create, Read, Update, Delete
-
-class FuncionarioModel {
+class enderecoModelModel {
     private $banco;
-    private $tabela = "funcionario";
 
     public function __construct(BancoDeDados $banco)
     {
-        $this->banco = $banco;
+        $this ->banco = $banco;
     }
 
-    public function listar($filtros = [], $limite = 20, $offset = 0)
+     public function listar($filtros = [], $limite = 20, $offset = 0)
     {
-        $sql = "SELECT * FROM {$this->tabela}"; // SELECT * FROM funcionario 
+        $sql = "SELECT * FROM {$this->tabela}";
 
         if (!empty($filtros)) {
             $where = [];
@@ -23,27 +20,24 @@ class FuncionarioModel {
             }
             
             $sql .= " WHERE " . implode(" AND ", $where);
-            /**
-             * SELECT * FROM funcionario WHERE nome  = 'Ariel' AND sobrenome = 'Silva';
-             */
         }
 
         $sql .= " LIMIT $limite OFFSET $offset";
 
-        return $this->banco->execQuery($sql, "Não foi possivel obter os funcionarios.");
+        return $this->banco->execQuery($sql, "Não foi possivel obter o endereco");
     }
 
     public function listarPorId($id)
     {
         $sql = "SELECT * FROM {$this->tabela} WHERE id = $id LIMIT 1";
-        return $this->banco->execQuery($sql, "Não foi possivel obter o funcionario.");
+        return $this->banco->execQuery($sql, "Não foi possivel obter o endereco");
     }
 
     public function excluir($id)
     {
         $sql = "DELETE FROM {$this->tabela} WHERE id = $id";
 
-        return $this->banco->execQuery($sql, "Não foi possivel excluir o funcionario.");
+        return $this->banco->execQuery($sql, "Não foi possivel obter o endereco.");
     }
     
     public function criar($dados) {
@@ -53,7 +47,7 @@ class FuncionarioModel {
 
         $sql = "INSERT INTO {$this->tabela} ($campos) VALUES ('$valores')";
 
-        return $this->banco->execQuery($sql, "Não foi possivel criar o funcionario.");
+        return $this->banco->execQuery($sql, "Não foi possivel obter o endereco");
     }
 
     public function atualizar($id, $dados) {
@@ -67,7 +61,7 @@ class FuncionarioModel {
 
         $sql = "UPDATE {$this->tabela} SET $setString WHERE id = $id";
 
-        return $this->banco->execQuery($sql, "Não foi possivel atualizar o funcionario.");
+        return $this->banco->execQuery($sql, "Não foi possivel obter o endereco");
     }
 
 }
