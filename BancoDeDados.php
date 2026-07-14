@@ -34,7 +34,7 @@ class BancoDeDados {
         $existeDados = $result->num_rows > 0;
 
         if (!$existeDados) {
-            return $dados;
+            return $dados; // []
         }
 
         while ($registro = $result->fetch_assoc()) {

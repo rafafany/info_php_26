@@ -1,18 +1,34 @@
 <?php
 
-// CRUD - Create, Read, Update, Delete
+interface BaseModelInterface {
+    public function listar($filtros = [], $limite = 20, $offset = 0);
+    public function listarPorId($id);
+    public function excluir($id);
+    public function criar($dados);
+    public function atualizar($id, $dados);
+}
 
-class FuncionarioModel {
-    private $banco;
-    private $tabela = "funcionario";
+class BaseModel {
+    private BancoDeDados $banco;
+    public $tabela = "";
 
     public function __construct(BancoDeDados $banco)
     {
         $this->banco = $banco;
     }
 
+    public function validarTabela() {
+        if (empty($this->tabela)) {
+            $erro = "A tabela não foi definida ou é inválida. Tabela: " . $this->tabela . " - Classe: " . get_class($this);
+
+            throw new Exception($erro);
+        }
+    }
+
     public function listar($filtros = [], $limite = 20, $offset = 0)
     {
+        $this->validarTabela();
+
         $sql = "SELECT * FROM {$this->tabela}"; // SELECT * FROM funcionario 
 
         if (!empty($filtros)) {
@@ -33,20 +49,23 @@ class FuncionarioModel {
         return $this->banco->execQuery($sql, "Não foi possivel obter os funcionarios.");
     }
 
-    public function listarPorId($id)
-    {
+    public function listarPorId($id) {
+        $this->validarTabela();
+
         $sql = "SELECT * FROM {$this->tabela} WHERE id = $id LIMIT 1";
         return $this->banco->execQuery($sql, "Não foi possivel obter o funcionario.");
     }
 
-    public function excluir($id)
-    {
+    public function excluir($id) {
+        $this->validarTabela();
+
         $sql = "DELETE FROM {$this->tabela} WHERE id = $id";
 
         return $this->banco->execQuery($sql, "Não foi possivel excluir o funcionario.");
     }
     
     public function criar($dados) {
+        $this->validarTabela();
 
         $campos = implode(", ", array_keys($dados));
         $valores = implode("', '", array_values($dados));
@@ -57,6 +76,8 @@ class FuncionarioModel {
     }
 
     public function atualizar($id, $dados) {
+        $this->validarTabela();
+
         $set = [];
 
         foreach ($dados as $campo => $valor) {
