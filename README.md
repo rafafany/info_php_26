@@ -62,7 +62,7 @@ define("BASE_URL", "");
 
 ## 3. Banco de dados
 
-Execute o arquivo `database.sql` no MariaDB/MySQL.
+Execute o arquivo `dump-info_php_26-202606232201.sql` no MariaDB/MySQL.
 
 ## 4. Teste
 
